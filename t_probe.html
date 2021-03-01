@@ -16,11 +16,9 @@
                     <textarea placeholder="499;525;498;503;501;497;493;496;500;495" style="resize: none;" class="form-control" id="array" cols="30" rows="5"></textarea>
                     <input class="form-control" type="text" id="m" placeholder="H0">
                     <input type="submit" id="submit" value="Számítás" class="btn btn-primary">
-                    <div class="card text-white bg-primary mb-3" style=" width: 100%; margin-top: 2vh;">    
-                        <div class="card-body" style="display: flex; flex-direction: row; justify-content: space-between; width: 200px;">
-                            <h3>t: </h3>
-                            <h3 id="result"></h3>
-                        </div>
+                    <div style="width: 100%; margin-top: 2vh; display: flex; flex-direction: row;">    
+                        <h3 style="margin-right: 40px;">t: </h3>
+                        <h3 id="result"></h3>
                     </div>
                 </form>
             </div>
@@ -97,7 +95,7 @@
                 if (document.getElementById("result").innerText == 'NaN') {
                     document.getElementById("result").style.color = '#e74c3c';
                 } else {
-                    document.getElementById("result").style.color = '#FFF';
+                    document.getElementById("result").style.color = '#212529';
                 };
             }, 100);
         </script>
