@@ -30,24 +30,4 @@
             </div>
         </div>
     </body>
-    <script type="module">
-        var firebaseConfig = {
-            apiKey: "AIzaSyAQ5E97GUBqFnbUEC9_9onoyVhadswkVcI",
-            authDomain: "piac-b00e6.firebaseapp.com",
-            databaseURL: "https://piac-b00e6-default-rtdb.europe-west1.firebasedatabase.app",
-            projectId: "piac-b00e6",
-            storageBucket: "piac-b00e6.appspot.com",
-            messagingSenderId: "634042035930",
-            appId: "1:634042035930:web:b14969feca76dc8980ffe3",
-            measurementId: "G-SNBMVBBDE0"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-
-        var btnPositive = document.getElementById('btnPositive');
-        var btnPositive = document.getElementById('btnNegative');
-
-        const reference = firebase.database().ref().child('opinions');
-        reference.on('value');
-    </script>
 </html>
