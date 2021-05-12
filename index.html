@@ -13,13 +13,4 @@
             <embed src="./file.pdf" width="100%" height="100%" />
         </div>
     </body>
-    <script>
-        const MongoClient = require('mongodb').MongoClient;
-        const uri = "mongodb+srv://Admin:<password>@cluster0.tyk3d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-        const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-        client.connect(err => {
-        const collection = client.db("test").collection("devices");
-        client.close();
-        });
-    </script>
 </html>
