@@ -25,7 +25,7 @@ document.getElementById("submit").addEventListener('click', (event) => {
     array = document.getElementById("array");
     m = document.getElementById("m");
 
-    if (array.value != '' || m.value != '' || sigma.value || '') {
+    if (array.value != '' || m.value != '') {
         if (actualArray = array.value.split(';')) {
             
             t = tProbe(actualArray, parseFloat(m.value));
