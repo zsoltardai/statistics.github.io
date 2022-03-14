@@ -2129,10 +2129,10 @@ function setGameSpeed(speed)
             localStorage.setItem('results', JSON.stringify(collectData()));
         },(500));
 
-        btnImg0.src = 'img/0_selected.png';
-        btnImg1.src = 'img/1.png';
-        btnImg2.src = 'img/2.png';
-        btnImg3.src = 'img/3.png';
+        btnImg0.src = 'svg/0_selected.png';
+        btnImg1.src = 'svg/1.png';
+        btnImg2.src = 'svg/2.png';
+        btnImg3.src = 'svg/3.png';
 
         paused.innerText = 'Paused';
     }
@@ -2157,10 +2157,10 @@ function setGameSpeed(speed)
             localStorage.setItem('results', JSON.stringify(collectData()));
         },(500));
         
-        btnImg0.src = 'img/0.png';
-        btnImg1.src = 'img/1_selected.png';
-        btnImg2.src = 'img/2.png';
-        btnImg3.src = 'img/3.png';
+        btnImg0.src = 'svg/0.png';
+        btnImg1.src = 'svg/1_selected.png';
+        btnImg2.src = 'svg/2.png';
+        btnImg3.src = 'svg/3.png';
 
         paused.innerText = '';
     }
@@ -2185,10 +2185,10 @@ function setGameSpeed(speed)
             localStorage.setItem('results', JSON.stringify(collectData()));
         },(500));
         
-        btnImg0.src = 'img/0.png';
-        btnImg1.src = 'img/1.png';
-        btnImg2.src = 'img/2_selected.png';
-        btnImg3.src = 'img/3.png';
+        btnImg0.src = 'svg/0.png';
+        btnImg1.src = 'svg/1.png';
+        btnImg2.src = 'svg/2_selected.png';
+        btnImg3.src = 'svg/3.png';
 
         paused.innerText = 'x2 speed';
     }
@@ -2213,10 +2213,10 @@ function setGameSpeed(speed)
             localStorage.setItem('results', JSON.stringify(collectData()));
         },(500));
         
-        btnImg0.src = 'img/0.png';
-        btnImg1.src = 'img/1.png';
-        btnImg2.src = 'img/2.png';
-        btnImg3.src = 'img/3_selected.png';
+        btnImg0.src = 'svg/0.png';
+        btnImg1.src = 'svg/1.png';
+        btnImg2.src = 'svg/2.png';
+        btnImg3.src = 'svg/3_selected.png';
 
         paused.innerText = '3x speed';
     }
