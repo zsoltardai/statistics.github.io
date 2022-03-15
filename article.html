@@ -82,6 +82,7 @@
                 let article = articles[i];
                 if (article.id === params['id']) {
                     title.innerText = article.title;
+                    window.title = article.title;
                     date.innerText = article.date;
                     image.src = article.image;
                     author.innerText = article.author;
