@@ -3,8 +3,7 @@ $.get('static/articles.json', function (articles) {
     let rowId = null;
     for (let i = 1; i < articles.length + 1; i++) {
         let articleObject = articles[i-1];
-        let articleId = 'article-' + Math.random().toString(16).slice(2);
-        let article = createArticlePreview(articleId, articleObject.title, articleObject.context, articleObject.author, articleObject.date);
+        let article = createArticlePreview(articleObject.id, articleObject.title, articleObject.context, articleObject.author, articleObject.date);
         if ((i-1) % 3 === 0 || i === 0) {
             rowId = 'row-' + Math.random().toString(16).slice(2);
             let row = createRow(rowId);
@@ -14,7 +13,6 @@ $.get('static/articles.json', function (articles) {
     }
 });
 
-
 let createArticlePreview = function (id, title, context, author, date) {
     let divider = document.createElement('hr');
     divider.classList.add('mt-1');
@@ -22,6 +20,7 @@ let createArticlePreview = function (id, title, context, author, date) {
     let card = document.createElement('div');
     card.classList.add('card');
     card.classList.add('p-2');
+    card.style.height = '400px';
     let container = document.createElement('div');
     container.classList.add('container');
     container.classList.add('p-2');
@@ -49,14 +48,12 @@ let createArticlePreview = function (id, title, context, author, date) {
     let cardContext = document.createElement('p');
     cardBody.appendChild(cardContext);
     cardContext.innerText = getPartOfText(context, 20);
-    let btnOpenArticle = document.createElement('button');
+    let btnOpenArticle = document.createElement('a');
     btnOpenArticle.classList.add('btn');
     btnOpenArticle.classList.add('btn-primary');
     btnOpenArticle.classList.add('w-100');
     btnOpenArticle.innerText = 'Read';
-    btnOpenArticle.addEventListener('onclick', function (event) {
-        console.log('id');
-    });
+    btnOpenArticle.href = `/article.html?id=${id}`;
     cardBody.appendChild(btnOpenArticle);
     return container;
 }
