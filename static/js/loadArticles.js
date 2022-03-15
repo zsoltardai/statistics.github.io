@@ -20,7 +20,6 @@ let createArticlePreview = function (id, title, context, author, date) {
     let card = document.createElement('div');
     card.classList.add('card');
     card.classList.add('p-2');
-    card.style.height = '400px';
     let container = document.createElement('div');
     container.classList.add('container');
     container.classList.add('p-2');
@@ -58,11 +57,18 @@ let createArticlePreview = function (id, title, context, author, date) {
     return container;
 }
 
+let rowIds = [];
+
 let createRow = function (id) {
     let row = document.createElement('div');
     row.id = id;
+    rowIds.push(id);
     row.classList.add('d-flex');
-    row.classList.add('flex-fill');
+    if (window.innerWidth < 800) {
+        row.classList.add('flex-column');
+    } else {
+        row.classList.add('flex-fill');
+    }
     row.classList.add('justify-content-around');
     return row;
 }
@@ -81,4 +87,20 @@ let getPartOfText = function (text, n) {
         newText += ` ${word}`;
     }
     return newText;
+}
+
+window.onresize = function () {
+    if (window.innerWidth < 800) {
+       for (let i = 0; i < rowIds.length; i++) {
+           let rowId = rowIds[i];
+           document.getElementById(rowId).classList.remove('flex-fill');
+           document.getElementById(rowId).classList.add('flex-column');
+       }
+    } else {
+        for (let i = 0; i < rowIds.length; i++) {
+            let rowId = rowIds[i];
+            document.getElementById(rowId).classList.remove('flex-column');
+            document.getElementById(rowId).classList.add('flex-fill');
+        }
+    }
 }
