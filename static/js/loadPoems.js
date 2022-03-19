@@ -39,7 +39,7 @@ let createPoemPreview = function (id, title, context) {
     btnOpenArticle.classList.add('btn-primary');
     btnOpenArticle.classList.add('w-100');
     btnOpenArticle.innerText = 'Read';
-    btnOpenArticle.href = `/article.html?id=${id}`;
+    btnOpenArticle.href = `/poem.html?id=${id}`;
     cardBody.appendChild(btnOpenArticle);
     return container;
 }

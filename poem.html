@@ -70,13 +70,15 @@
             let searchParams = new URLSearchParams(window.location.search);
             let params = Object.fromEntries(searchParams.entries());
 
-            $.get('static/poems.json', function (articles) {
-                for (let i = 0; i < articles.length; i++) {
-                    let article = articles[i];
-                    if (article.id === params['id']) {
-                        title.innerText = article.title;
-                        window.title = article.title;
-                        context.innerText = article.context;
+            console.log(params);
+
+            $.get('static/poems.json', function (poems) {
+                for (let i = 0; i < poems.length; i++) {
+                    let poem = poems[i];
+                    if (poem.id === params['id']) {
+                        title.innerText = poem.title;
+                        window.title = poem.title;
+                        context.innerText = poem.context;
                         break;
                     }
                 }
